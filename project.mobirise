@@ -802,7 +802,7 @@
       "settings": {
         "meta_descr": "Web Site Builder Description",
         "title": "Desenvolvimento @ Hélder Jorge",
-        "order": 4
+        "order": 3
       },
       "components": [
         {
@@ -1228,7 +1228,7 @@
       "settings": {
         "meta_descr": "Website Generator Description",
         "title": "Sistemas @ Hélder Jorge",
-        "order": 3
+        "order": 1
       },
       "components": [
         {
