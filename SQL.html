@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <!-- Site made with Mobirise Website Builder v4.9.5, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v4.9.5, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/fp-122x92.jpg" type="image/x-icon">
+  <meta name="description" content="Web Generator Description">
+  <title>SQL</title>
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons-bold/mobirise-icons-bold.css">
+  <link rel="stylesheet" href="assets/tether/tether.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  
+  
+  
+</head>
+<body>
+  <section class="menu cid-rkjZZu4Rmt" once="menu" id="menu1-x">
+
+    
+
+    <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
+        <div class="menu-logo">
+            <div class="navbar-brand">
+                <span class="navbar-logo">
+                    <a href="https://mobirise.co">
+                         <img src="assets/images/fp-122x92.jpg" alt="Mobirise" title="" style="height: 3.8rem;">
+                    </a>
+                </span>
+                <span class="navbar-caption-wrap"><a class="navbar-caption text-success display-4" href="index.html">+Futuro @ <br>Hélder Jorge<br></a></span>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item">
+                    <a class="nav-link link text-white display-4" href="https://mobirise.co">
+                        </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link text-white display-4" href="https://mobirise.co">
+                        </a>
+                </li><li class="nav-item"><a class="nav-link link text-white display-4" href="index.html#timeline1-e" aria-expanded="false"><span class="mbrib-user mbr-iconfont mbr-iconfont-btn"></span>
+                        Autobiografia</a></li><li class="nav-item"><a class="nav-link link text-white display-4" href="index.html#team1-k" aria-expanded="false"><span class="mbrib-rocket mbr-iconfont mbr-iconfont-btn"></span>
+                        Competências</a></li></ul>
+            <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-success-outline display-4" href="Desenvolvimento.html"><span class="mobi-mbri mobi-mbri-code mbr-iconfont mbr-iconfont-btn"></span>
+                    Desenvolvimento</a> <a class="btn btn-sm btn-success-outline display-4" href="Sistemas.html"><span class="mbri-setting mbr-iconfont mbr-iconfont-btn"></span>
+                    Sistemas</a></div>
+        </div>
+    </nav>
+</section>
+
+<section class="engine"><a href="https://mobirise.info/i">web creation software</a></section><section class="mbr-section article content10 cid-rkpmSavXAj" id="content10-11">
+    
+     
+
+    <div class="container">
+        <div class="inner-container" style="width: 66%;">
+            <hr class="line" style="width: 25%;">
+            <div class="section-text align-center mbr-white mbr-fonts-style display-1"><br>SQL&nbsp;<br>Uso de Trigger's</div>
+            <hr class="line" style="width: 25%;">
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article content10 cid-rkplAax6pT" id="content10-z">
+    
+     
+
+    <div class="container">
+        <div class="inner-container" style="width: 100%;">
+            <hr class="line" style="width: 25%;">
+            <div class="section-text align-center mbr-white mbr-fonts-style display-5">Use teste;
+<div>
+</div><div>CREATE TABLE Employee_Test
+</div><div>(
+</div><div>Emp_ID INT Identity,
+</div><div>Emp_name Varchar(100),
+</div><div>Emp_Sal Decimal (10,2)
+</div><div>);
+</div><div>
+</div><div>INSERT INTO Employee_Test VALUES ('Anees',1000);
+</div><div>INSERT INTO Employee_Test VALUES ('Rick',1200);
+</div><div>INSERT INTO Employee_Test VALUES ('John',1100);
+</div><div>INSERT INTO Employee_Test VALUES ('Stephen',1300);
+</div><div>INSERT INTO Employee_Test VALUES ('Maria',1400);
+</div><div>Select * from Employee_Test;
+</div><div>
+</div><div>CREATE TABLE Employee_Test_Audit
+</div><div>(
+</div><div>Emp_ID int,
+</div><div>Emp_name varchar(100),
+</div><div>Emp_Sal decimal (10,2),
+</div><div>Audit_Action varchar(100),
+</div><div>Audit_Timestamp datetime
+</div><div>);
+</div><div>Select * from Employee_Test_Audit;
+</div><div>
+</div><div>PRINT 'Usar pelicas e não aspas';
+</div><div>
+</div><div>Drop Trigger trgAfterInsert;
+</div><div>CREATE TRIGGER trgAfterInsert ON [dbo].[Employee_Test]
+</div><div>FOR INSERT
+</div><div>AS
+</div><div>declare @empid int;
+</div><div>declare @empname varchar(100);
+</div><div>declare @empsal decimal(10,2);
+</div><div>declare @audit_action varchar(100);
+</div><div>select @empid=i.Emp_ID from inserted i;
+</div><div>select @empname=i.Emp_Name from inserted i;
+</div><div>select @empsal=i.Emp_Sal from inserted i;
+</div><div>set @audit_action='Inserted Record ‐‐ After Insert Trigger.';
+</div><div>insert into Employee_Test_Audit
+</div><div>(Emp_ID,Emp_Name,Emp_Sal,Audit_Action,Audit_Timestamp)
+</div><div>values(@empid,@empname,@empsal,@audit_action,getdate());
+</div><div>PRINT 'AFTER INSERT trigger fired.'
+</div><div>GO
+</div><div>
+</div><div>insert into Employee_Test values('Chris',1500);
+</div><div>Select * from Employee_Test;
+</div><div>Select * from Employee_Test_Audit;
+</div><div>
+</div><div>Drop TRIGGER trgAfterUpdate;
+</div><div>CREATE TRIGGER trgAfterUpdate ON [dbo].[Employee_Test]
+</div><div>FOR UPDATE
+</div><div>AS
+</div><div>declare @empid int;
+</div><div>declare @empname varchar(100);
+</div><div>declare @empsal decimal(10,2);
+</div><div>declare @email varchar(100);
+</div><div>declare @audit_action varchar(100);
+</div><div>select @empid=i.Emp_ID from inserted i;
+</div><div>select @empname=i.Emp_Name from inserted i;
+</div><div>select @empsal=i.Emp_Sal from inserted i;
+</div><div>select @email=i.email from inserted i;
+</div><div>if update(email)
+</div><div>set @audit_action='Updated Email ‐‐ After Update Trigger.';
+</div><div>if update(Emp_Name)
+</div><div>set @audit_action='Updated Name ‐‐ After Update Trigger.';
+</div><div>if update(Emp_Sal)
+</div><div>set @audit_action='Updated Salary ‐‐ After Update Trigger.';
+</div><div>if (update (Emp_Name) AND update(Emp_Sal))
+</div><div>set @audit_action='Updated Record ‐‐ After Update Trigger.';
+</div><div>
+</div><div>insert into Employee_Test_Audit(Emp_ID,Emp_Name,Emp_Sal,Audit_Action,Audit_Timestamp,email)
+</div><div>values(@empid,@empname,@empsal,@audit_action,getdate(),@email);
+</div><div>PRINT 'AFTER UPDATE Trigger fired.'
+</div><div>GO
+</div><div>
+</div><div>update Employee_Test set Emp_Sal=1550, Emp_Name = 'Ze' where Emp_ID=5;
+</div><div>Select * from Employee_Test;
+</div><div>Select * from Employee_Test_Audit;
+</div><div>
+</div><div>Drop Trigger trgAfterDelete;
+</div><div>CREATE TRIGGER trgAfterDelete ON [dbo].[Employee_Test]
+</div><div>AFTER DELETE
+</div><div>AS
+</div><div>declare @empid int;
+</div><div>declare @empname varchar(100);
+</div><div>declare @empsal decimal(10,2);
+</div><div>declare @audit_action varchar(100);
+</div><div>select @empid=d.Emp_ID from deleted d;
+</div><div>select @empname=d.Emp_Name from deleted d;
+</div><div>select @empsal=d.Emp_Sal from deleted d;
+</div><div>set @audit_action='Deleted ‐‐ After Delete Trigger.';
+</div><div>insert into Employee_Test_Audit
+</div><div>(Emp_ID,Emp_Name,Emp_Sal,Audit_Action,Audit_Timestamp)
+</div><div>values(@empid,@empname,@empsal,@audit_action,getdate());
+</div><div>PRINT 'AFTER DELETE TRIGGER fired.'
+</div><div>GO
+</div><div>
+</div><div>Delete from Employee_Test where Emp_ID=23;
+</div><div>Select * from Employee_Test;
+</div><div>Select * from Employee_Test_Audit;
+</div><div>
+</div><div>ALTER TABLE Employee_Test DISABLE TRIGGER ALL;
+</div><div>ALTER TABLE Employee_Test ENABLE TRIGGER ALL;
+</div><div>ALTER TABLE Employee_Test DISABLE TRIGGER trgAfterDelete;
+</div><div>
+</div><div>DROP TRIGGER trgInsteadOfDelete;
+</div><div>CREATE TRIGGER trgInsteadOfDelete ON [dbo].[Employee_Test]
+</div><div>INSTEAD OF DELETE
+</div><div>AS
+</div><div>declare @emp_id int;
+</div><div>declare @emp_name varchar(100);
+</div><div>declare @emp_sal int;
+</div><div>select @emp_id=d.Emp_ID from deleted d;
+</div><div>select @emp_name=d.Emp_Name from deleted d;
+</div><div>select @emp_sal=d.Emp_Sal from deleted d;
+</div><div>BEGIN
+</div><div>&nbsp;if(@emp_sal&gt;1200)
+</div><div>&nbsp; begin
+</div><div>&nbsp; RAISERROR('Cannot delete where salary &gt; 1200',16,1);
+</div><div>&nbsp; ROLLBACK;
+</div><div>&nbsp; end
+</div><div>&nbsp;else
+</div><div>&nbsp; begin
+</div><div>&nbsp; delete from Employee_Test where Emp_ID=@emp_id;
+</div><div>&nbsp; COMMIT;
+</div><div>&nbsp; insert into Employee_Test_Audit(Emp_ID,Emp_Name,Emp_Sal,Audit_Action,Audit_Timestamp)
+</div><div>&nbsp; values(@emp_id,@emp_name,@emp_sal,'Deleted ‐‐ Instead Of Delete Trigger.',getdate());
+</div><div>&nbsp; PRINT 'Record Deleted ‐‐ Instead Of Delete Trigger.'
+</div><div>&nbsp; END
+</div><div>END
+</div><div>GO
+</div><div>
+</div><div>
+</div><div>Insert into Employee_Test values('Rute',1459,null);
+</div><div>Delete from Employee_Test where Emp_ID=15;
+</div><div>Select * from Employee_Test;
+</div><div>Select * from Employee_Test_Audit;
+</div><div>
+</div><div>Alter table Employee_test alter column Email varchar(100);
+</div><div>Alter table Employee_test_Audit add Email varchar(100);
+</div><div>
+</div><div>Alter Trigger trgAfterInsert ON Employee_Test
+</div><div>FOR INSERT
+</div><div>AS
+</div><div>declare @empid int;
+</div><div>declare @empname varchar(100);
+</div><div>declare @empsal decimal(10,2);
+</div><div>declare @email varchar (100);
+</div><div>declare @audit_action varchar(100);
+</div><div>select @empid=i.Emp_ID from inserted i;
+</div><div>select @empname=i.Emp_Name from inserted i;
+</div><div>select @empsal=i.Emp_Sal from inserted i;
+</div><div>select @email=i.Email from inserted i;
+</div><div>If @email is null
+</div><div>&nbsp;Begin
+</div><div>&nbsp;Update Employee_Test set Employee_test.email=@empname+'@alcoitao.pt' where Employee_test.Emp_id=@empid;
+</div><div>&nbsp;set @email=@empname+'@alcoitao.pt'
+</div><div>&nbsp;set @audit_action='Inserted Record ‐‐ After Insert Trigger.';
+</div><div>&nbsp;End
+</div><div>set @audit_action='Inserted Record ‐‐ After Insert Trigger.';
+</div><div>insert into Employee_Test_Audit
+</div><div>(Emp_ID,Emp_Name,Emp_Sal,Audit_Action,Audit_Timestamp,email)
+</div><div>values(@empid,@empname,@empsal,@audit_action,getdate(),@email);
+</div><div>PRINT 'AFTER INSERT trigger fired.'
+</div><div>GO</div></div>
+            <hr class="line" style="width: 25%;">
+        </div>
+    </div>
+</section>
+
+<section class="cid-rkpmDNk1pa" id="footer1-10">
+
+    
+
+    
+
+    <div class="container">
+        <div class="media-container-row content text-white">
+            <div class="col-12 col-md-3">
+                <div class="media-wrap">
+                    
+                        <img src="assets/images/fp-122x92.jpg" alt="Mobirise" title="">
+                    
+                </div>
+            </div>
+            <div class="col-12 col-md-3 mbr-fonts-style display-7">
+                <h5 class="pb-3">Morada</h5>
+                <p class="mbr-text">2790-003 Queijas<br>Oeiras</p>
+            </div>
+            <div class="col-12 col-md-3 mbr-fonts-style display-7">
+                <h5 class="pb-3">Contactos</h5>
+                <p class="mbr-text">
+                    Email: helder.g.jorge@sapo.pt<br>Telemóvel: 969895109<br></p>
+            </div>
+            <div class="col-12 col-md-3 mbr-fonts-style display-7">
+                <h5 class="pb-3">
+                    Links
+                </h5>
+                <p class="mbr-text"><a href="https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017" class="text-warning">SSMS</a></p>
+            </div>
+        </div>
+        <div class="footer-lower">
+            <div class="media-container-row">
+                <div class="col-sm-12">
+                    <hr>
+                </div>
+            </div>
+            <div class="media-container-row mbr-white">
+                <div class="col-sm-6 copyright">
+                    <p class="mbr-text mbr-fonts-style display-7">
+                        © Copyright 2019 Hélder Jorge - All Rights Reserved
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <div class="social-list align-right">
+                        <div class="soc-item">
+                            <a href="https://www.linkedin.com/in/h%C3%A9lder-jorge-4086a915b/" target="_blank">
+                                <span class="mbr-iconfont mbr-iconfont-social socicon-linkedin socicon"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="https://github.com/HelderJorge" target="_blank">
+                                <span class="mbr-iconfont mbr-iconfont-social socicon-github socicon"></span>
+                            </a>
+                        </div>
+                        
+                        
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  <script src="assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="assets/popper/popper.min.js"></script>
+  <script src="assets/tether/tether.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
+  <script src="assets/smoothscroll/smooth-scroll.js"></script>
+  <script src="assets/dropdown/js/script.min.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+  
+  
+</body>
+</html>
